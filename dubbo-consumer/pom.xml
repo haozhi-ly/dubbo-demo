@@ -1,0 +1,197 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com</groupId>
+  <artifactId>dubbo-consumer</artifactId>
+  <packaging>war</packaging>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>dubbo-consumer</name>
+  <url>http://maven.apache.org</url>
+  
+ <dependencies>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>dubbo</artifactId>
+            <version>2.5.5</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework</groupId>
+                    <artifactId>spring</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+         <dependency>
+             <groupId>junit</groupId>
+             <artifactId>junit</artifactId>
+             <version>4.12</version>
+         </dependency>
+
+        <!-- spring -->
+     <dependency>
+         <groupId>org.springframework</groupId>
+         <artifactId>spring-test</artifactId>
+         <version>4.2.5.RELEASE</version>
+     </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-beans</artifactId>
+            <version>4.2.5.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>4.2.5.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>4.2.5.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>4.2.5.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>4.2.5.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context-support</artifactId>
+            <version>4.2.5.RELEASE</version>
+        </dependency>
+      
+        <dependency>
+            <groupId>org.apache.zookeeper</groupId>
+            <artifactId>zookeeper</artifactId>
+            <version>3.4.10</version>
+            <exclusions>
+            	<exclusion>
+            		<artifactId>log4j</artifactId>
+            		<groupId>log4j</groupId>
+            	</exclusion>
+            	<exclusion>
+            		<artifactId>slf4j-api</artifactId>
+            		<groupId>org.slf4j</groupId>
+            	</exclusion>
+            	<exclusion>
+            		<artifactId>slf4j-log4j12</artifactId>
+            		<groupId>org.slf4j</groupId>
+            	</exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>com.github.sgroschupf</groupId>
+            <artifactId>zkclient</artifactId>
+            <version>0.1</version>
+            <exclusions>
+            	<exclusion>
+            		<artifactId>log4j</artifactId>
+            		<groupId>log4j</groupId>
+            	</exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+		 <groupId>com</groupId>
+		  <artifactId>dubbo-api</artifactId>
+		  <version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-slf4j-impl</artifactId>
+			<version>2.5</version>
+			<scope>runtime</scope>
+			
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<version>2.5</version>
+			<scope>runtime</scope>
+		</dependency>
+		
+		<dependency>  
+		    <groupId>org.apache.logging.log4j</groupId>  
+		    <artifactId>log4j-1.2-api</artifactId>  
+		    <version>2.5</version>  
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-web -->
+	<dependency>
+	    <groupId>org.apache.logging.log4j</groupId>
+	    <artifactId>log4j-web</artifactId>
+	    <version>2.5</version>
+	</dependency>
+
+    </dependencies>
+      <build>
+
+          <plugins>
+              <!--
+        此plugin可以用
+        利用此plugin，把源代码中的xml文件，打包到相应位置，
+        这里主要是为了打包Mybatis的mapper.xml文件
+        -->
+              <plugin>
+                  <artifactId>maven-resources-plugin</artifactId>
+                  <executions>
+                      <execution>
+                          <id>copy-xml</id>
+                          <phase>process-sources</phase>
+                          <goals>
+                              <goal>copy-resources</goal>
+                          </goals>
+                          <configuration>
+                              <outputDirectory>${basedir}/target/classes</outputDirectory>
+                              <resources>
+                                  <resource>
+                                      <directory>${basedir}/src/main/java</directory>
+                                      <includes>
+                                          <include>**/*.xml</include>
+                                      </includes>
+                                  </resource>
+                              </resources>
+                          </configuration>
+                      </execution>
+                  </executions>
+              </plugin>
+
+              <plugin>
+                  <groupId>org.apache.maven.plugins</groupId>
+                  <artifactId>maven-assembly-plugin</artifactId>
+                  <version>3.1.1</version>
+                  <configuration>
+                    <!--内置的-->
+                     <!-- <descriptorRefs>jar-with-dependencies
+                      </descriptorRefs>-->
+                    <!--自定义的-->
+                      <descriptors>
+                          <descriptor>src/main/assembly/assembly.xml</descriptor>
+                      </descriptors>
+
+                  </configuration>
+
+                  <executions>
+                      <execution>
+                          <id>make-assembly</id>
+                          <phase>package</phase>
+                          <goals>
+                              <goal>single</goal>
+                          </goals>
+
+                      </execution>
+                  </executions>
+              </plugin>
+
+          </plugins>
+
+
+
+
+      </build>
+</project>

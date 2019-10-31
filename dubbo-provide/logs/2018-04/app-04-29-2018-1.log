@@ -1,0 +1,58 @@
+2018-04-29 22:56:52,410 INFO o.a.z.ZooKeeper [main] Client environment:user.name=sky_
+2018-04-29 22:56:52,417 INFO o.a.z.ZooKeeper [main] Client environment:user.home=C:\Users\sky_
+2018-04-29 22:56:52,417 INFO o.a.z.ZooKeeper [main] Client environment:user.dir=G:\new\dubbo-provide
+2018-04-29 22:56:52,419 INFO o.a.z.ZooKeeper [main] Initiating client connection, connectString=127.0.0.1:2181 sessionTimeout=30000 watcher=org.I0Itec.zkclient.ZkClient@a50707
+2018-04-29 22:56:52,424 DEBUG o.a.z.ClientCnxn [main] zookeeper.disableAutoWatchReset is false
+2018-04-29 22:56:52,435 DEBUG o.I.z.ZkClient [main] Awaiting connection to Zookeeper server
+2018-04-29 22:56:52,436 DEBUG o.I.z.ZkClient [main] Waiting for keeper state SyncConnected
+2018-04-29 22:56:52,441 INFO o.a.z.ClientCnxn [main-SendThread(127.0.0.1:2181)] Opening socket connection to server 127.0.0.1/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+2018-04-29 22:56:52,444 INFO o.a.z.ClientCnxn [main-SendThread(127.0.0.1:2181)] Socket connection established to 127.0.0.1/127.0.0.1:2181, initiating session
+2018-04-29 22:56:52,447 DEBUG o.a.z.ClientCnxn [main-SendThread(127.0.0.1:2181)] Session establishment request sent on 127.0.0.1/127.0.0.1:2181
+2018-04-29 22:56:52,531 INFO o.a.z.ClientCnxn [main-SendThread(127.0.0.1:2181)] Session establishment complete on server 127.0.0.1/127.0.0.1:2181, sessionid = 0x16311dbef1d0001, negotiated timeout = 30000
+2018-04-29 22:56:52,533 DEBUG o.I.z.ZkClient [main-EventThread] Received event: WatchedEvent state:SyncConnected type:None path:null
+2018-04-29 22:56:52,533 INFO o.I.z.ZkClient [main-EventThread] zookeeper state changed (SyncConnected)
+2018-04-29 22:56:52,534 DEBUG o.I.z.ZkClient [main-EventThread] Leaving process event
+2018-04-29 22:56:52,534 DEBUG o.I.z.ZkClient [main] State is SyncConnected
+2018-04-29 22:56:52,535 INFO c.a.d.r.z.ZookeeperRegistry [main]  [DUBBO] Register: dubbo://192.168.48.1:20880/com.UserService?anyhost=true&application=dubbo-provider&default.cluster=failfast&dubbo=2.5.5&generic=false&interface=com.UserService&methods=sayHello&pid=3904&side=provider&timestamp=1525013802612, dubbo version: 2.5.5, current host: 127.0.0.1
+2018-04-29 22:56:52,621 DEBUG o.a.z.ClientCnxn [main-SendThread(127.0.0.1:2181)] Reading reply sessionid:0x16311dbef1d0001, packet:: clientPath:null serverPath:null finished:false header:: 1,1  replyHeader:: 1,725,-110  request:: '/dubbo,,v{s{31,s{'world,'anyone}}},0  response::  
+2018-04-29 22:56:52,741 DEBUG o.a.z.ClientCnxn [main-SendThread(127.0.0.1:2181)] Reading reply sessionid:0x16311dbef1d0001, packet:: clientPath:null serverPath:null finished:false header:: 2,1  replyHeader:: 2,726,-110  request:: '/dubbo/com.UserService,,v{s{31,s{'world,'anyone}}},0  response::  
+2018-04-29 22:56:52,959 DEBUG o.a.z.ClientCnxn [main-SendThread(127.0.0.1:2181)] Reading reply sessionid:0x16311dbef1d0001, packet:: clientPath:null serverPath:null finished:false header:: 3,1  replyHeader:: 3,727,-110  request:: '/dubbo/com.UserService/providers,,v{s{31,s{'world,'anyone}}},0  response::  
+2018-04-29 22:56:53,039 DEBUG o.a.z.ClientCnxn [main-SendThread(127.0.0.1:2181)] Reading reply sessionid:0x16311dbef1d0001, packet:: clientPath:null serverPath:null finished:false header:: 4,1  replyHeader:: 4,728,0  request:: '/dubbo/com.UserService/providers/dubbo%253A%252F%252F192.168.48.1%253A20880%252Fcom.UserService%253Fanyhost%253Dtrue%2526application%253Ddubbo-provider%2526default.cluster%253Dfailfast%2526dubbo%253D2.5.5%2526generic%253Dfalse%2526interface%253Dcom.UserService%2526methods%253DsayHello%2526pid%253D3904%2526side%253Dprovider%2526timestamp%253D1525013802612,,v{s{31,s{'world,'anyone}}},1  response:: '/dubbo/com.UserService/providers/dubbo%253A%252F%252F192.168.48.1%253A20880%252Fcom.UserService%253Fanyhost%253Dtrue%2526application%253Ddubbo-provider%2526default.cluster%253Dfailfast%2526dubbo%253D2.5.5%2526generic%253Dfalse%2526interface%253Dcom.UserService%2526methods%253DsayHello%2526pid%253D3904%2526side%253Dprovider%2526timestamp%253D1525013802612 
+2018-04-29 22:56:53,042 INFO c.a.d.r.z.ZookeeperRegistry [main]  [DUBBO] Subscribe: provider://192.168.48.1:20880/com.UserService?anyhost=true&application=dubbo-provider&category=configurators&check=false&default.cluster=failfast&dubbo=2.5.5&generic=false&interface=com.UserService&methods=sayHello&pid=3904&side=provider&timestamp=1525013802612, dubbo version: 2.5.5, current host: 127.0.0.1
+2018-04-29 22:56:53,091 DEBUG o.a.z.ClientCnxn [main-SendThread(127.0.0.1:2181)] Reading reply sessionid:0x16311dbef1d0001, packet:: clientPath:null serverPath:null finished:false header:: 5,1  replyHeader:: 5,729,-110  request:: '/dubbo,,v{s{31,s{'world,'anyone}}},0  response::  
+2018-04-29 22:56:53,139 DEBUG o.a.z.ClientCnxn [main-SendThread(127.0.0.1:2181)] Reading reply sessionid:0x16311dbef1d0001, packet:: clientPath:null serverPath:null finished:false header:: 6,1  replyHeader:: 6,730,-110  request:: '/dubbo/com.UserService,,v{s{31,s{'world,'anyone}}},0  response::  
+2018-04-29 22:56:53,190 DEBUG o.a.z.ClientCnxn [main-SendThread(127.0.0.1:2181)] Reading reply sessionid:0x16311dbef1d0001, packet:: clientPath:null serverPath:null finished:false header:: 7,1  replyHeader:: 7,731,-110  request:: '/dubbo/com.UserService/configurators,,v{s{31,s{'world,'anyone}}},0  response::  
+2018-04-29 22:56:53,198 DEBUG o.a.z.ClientCnxn [main-SendThread(127.0.0.1:2181)] Reading reply sessionid:0x16311dbef1d0001, packet:: clientPath:null serverPath:null finished:false header:: 8,3  replyHeader:: 8,731,0  request:: '/dubbo/com.UserService/configurators,T  response:: s{8,8,1523709691350,1523709691350,0,0,0,0,0,0,8} 
+2018-04-29 22:56:53,202 DEBUG o.a.z.ClientCnxn [main-SendThread(127.0.0.1:2181)] Reading reply sessionid:0x16311dbef1d0001, packet:: clientPath:null serverPath:null finished:false header:: 9,8  replyHeader:: 9,731,0  request:: '/dubbo/com.UserService/configurators,T  response:: v{} 
+2018-04-29 22:56:53,203 INFO c.a.d.r.z.ZookeeperRegistry [main]  [DUBBO] Notify urls for subscribe url provider://192.168.48.1:20880/com.UserService?anyhost=true&application=dubbo-provider&category=configurators&check=false&default.cluster=failfast&dubbo=2.5.5&generic=false&interface=com.UserService&methods=sayHello&pid=3904&side=provider&timestamp=1525013802612, urls: [empty://192.168.48.1:20880/com.UserService?anyhost=true&application=dubbo-provider&category=configurators&check=false&default.cluster=failfast&dubbo=2.5.5&generic=false&interface=com.UserService&methods=sayHello&pid=3904&side=provider&timestamp=1525013802612], dubbo version: 2.5.5, current host: 127.0.0.1
+2018-04-29 22:56:53,214 DEBUG c.a.d.c.e.ExtensionLoader [main]  [DUBBO] package com.alibaba.dubbo.rpc.cluster;
+import com.alibaba.dubbo.common.extension.ExtensionLoader;
+public class RouterFactory$Adpative implements com.alibaba.dubbo.rpc.cluster.RouterFactory {
+public com.alibaba.dubbo.rpc.cluster.Router getRouter(com.alibaba.dubbo.common.URL arg0) {
+if (arg0 == null) throw new IllegalArgumentException("url == null");
+com.alibaba.dubbo.common.URL url = arg0;
+String extName = url.getProtocol();
+if(extName == null) throw new IllegalStateException("Fail to get extension(com.alibaba.dubbo.rpc.cluster.RouterFactory) name from url(" + url.toString() + ") use keys([protocol])");
+com.alibaba.dubbo.rpc.cluster.RouterFactory extension = (com.alibaba.dubbo.rpc.cluster.RouterFactory)ExtensionLoader.getExtensionLoader(com.alibaba.dubbo.rpc.cluster.RouterFactory.class).getExtension(extName);
+return extension.getRouter(arg0);
+}
+}, dubbo version: 2.5.5, current host: 127.0.0.1
+2018-04-29 22:56:53,226 DEBUG c.a.d.c.e.ExtensionLoader [main]  [DUBBO] package com.alibaba.dubbo.rpc.cluster;
+import com.alibaba.dubbo.common.extension.ExtensionLoader;
+public class ConfiguratorFactory$Adpative implements com.alibaba.dubbo.rpc.cluster.ConfiguratorFactory {
+public com.alibaba.dubbo.rpc.cluster.Configurator getConfigurator(com.alibaba.dubbo.common.URL arg0) {
+if (arg0 == null) throw new IllegalArgumentException("url == null");
+com.alibaba.dubbo.common.URL url = arg0;
+String extName = url.getProtocol();
+if(extName == null) throw new IllegalStateException("Fail to get extension(com.alibaba.dubbo.rpc.cluster.ConfiguratorFactory) name from url(" + url.toString() + ") use keys([protocol])");
+com.alibaba.dubbo.rpc.cluster.ConfiguratorFactory extension = (com.alibaba.dubbo.rpc.cluster.ConfiguratorFactory)ExtensionLoader.getExtensionLoader(com.alibaba.dubbo.rpc.cluster.ConfiguratorFactory.class).getExtension(extName);
+return extension.getConfigurator(arg0);
+}
+}, dubbo version: 2.5.5, current host: 127.0.0.1
+2018-04-29 22:56:53,239 DEBUG o.s.c.e.PropertySourcesPropertyResolver [main] Could not find key 'spring.liveBeansView.mbeanDomain' in any property source
+2018-04-29 22:57:03,202 DEBUG o.a.z.ClientCnxn [main-SendThread(127.0.0.1:2181)] Got ping response for sessionid: 0x16311dbef1d0001 after 0ms
+2018-04-29 22:57:13,203 DEBUG o.a.z.ClientCnxn [main-SendThread(127.0.0.1:2181)] Got ping response for sessionid: 0x16311dbef1d0001 after 0ms
+2018-04-29 22:57:23,203 DEBUG o.a.z.ClientCnxn [main-SendThread(127.0.0.1:2181)] Got ping response for sessionid: 0x16311dbef1d0001 after 0ms
+2018-04-29 22:57:33,204 DEBUG o.a.z.ClientCnxn [main-SendThread(127.0.0.1:2181)] Got ping response for sessionid: 0x16311dbef1d0001 after 1ms
+2018-04-29 22:57:43,203 DEBUG o.a.z.ClientCnxn [main-SendThread(127.0.0.1:2181)] Got ping response for sessionid: 0x16311dbef1d0001 after 0ms
+2018-04-29 22:57:53,204 DEBUG o.a.z.ClientCnxn [main-SendThread(127.0.0.1:2181)] Got ping response for sessionid: 0x16311dbef1d0001 after 0ms
